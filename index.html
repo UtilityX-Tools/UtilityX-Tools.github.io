@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UtilityX Tools</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/ICON.png"> <!-- Favicon link -->
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Page Section -->
+    <section id="home">
+        <header>
+            <h1>UtilityX Tools</h1>
+            <p>UtilityX is a multifunctional project that brings together various tools and software designed to meet diverse needs in development, cybersecurity, and automation, providing solutions tailored to different technical contexts.</p>
+            <button id="learn-more-btn" onclick="showDisclaimer()">Learn More</button>
+        </header>
+        
+        <!-- Disclaimer Box (Initially Hidden) -->
+        <div id="disclaimer-box">
+            <p><strong>Disclaimer:</strong><br>
+            All UtilityX items have been developed for educational purposes only.<br>
+            This project was created with good intentions and is intended for personal use exclusively.<br>
+            By choosing to use UtilityX, you acknowledge and accept full responsibility for any consequences that may result from your actions.</p>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download">
+        <div id="download-section">
+            <a href="UtlityX.zip" class="download-btn" download>Download UtilityX</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 UtilityX Tools</p>
+        <div class="social-links">
+            <a href="https://discord.gg/F9DFbPtf2u" target="_blank">Discord</a>
+            <a href="https://github.com/UtilityX-Tools" target="_blank">GitHub</a>
+            <a href="mailto:utilityxtool@gmail.com" target="_blank">Contact</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript to handle Learn More button and Disclaimer visibility -->
+    <script>
+        function showDisclaimer() {
+            document.getElementById('disclaimer-box').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
