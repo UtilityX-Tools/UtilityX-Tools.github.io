@@ -7,9 +7,18 @@
     <title>UtilityX Tools</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="Images/ICON.png"> <!-- Favicon link -->
+    <style>
+        /* Inline CSS for added spacing */
+        button#learn-more-btn {
+            margin-bottom: 30px; /* Adds spacing below the "Learn More" button */
+        }
+
+        button#EULA-btn {
+            margin-top: 30px; /* Optional: Adds spacing above the "Show EULA" button */
+        }
+    </style>
 </head>
 <body>
-
     <!-- Navigation Bar -->
     <nav>
         <ul>
@@ -28,13 +37,64 @@
             <button id="learn-more-btn" onclick="showDisclaimer()">Learn More</button>
         </header>
         
-        <!-- Disclaimer Box (Initially Hidden) -->
+        <!-- Disclaimer Box -->
         <div id="disclaimer-box">
             <p><strong>Disclaimer:</strong><br>
             All UtilityX items have been developed for educational purposes only.<br>
             This project was created with good intentions and is intended for personal use exclusively.<br>
             By choosing to use UtilityX, you acknowledge and accept full responsibility for any consequences that may result from your actions.</p>
         </div>
+
+        <!-- EULA Box and Button -->
+        <div id="EULA-box">
+            <p><strong>EULA:</strong><br>
+            END-USER LICENSE AGREEMENT (EULA) <br>
+
+By downloading, installing, or using UtilityX (the "Software"), you (the "Licensee") agree to the following terms and conditions of this End-User License Agreement (the "Agreement") with [Your Name/Your Company Name], the Licensor ("Licensor"). If you do not agree to the terms, you are not authorized to download, install, or use the Software.
+
+Effective Date: 12/4/2024
+
+1. License Grant
+The Licensor grants the Licensee a non-exclusive, non-transferable, and limited license to download, install, and use the Software for commercial purposes, subject to the terms and conditions of this Agreement. This license is strictly limited to internal business use and does not grant the Licensee any rights to:
+
+Modify, adapt, or create derivative works based on the Software;
+Redistribute, sublicense, sell, or transfer the Software or any portion thereof;
+Disassemble, reverse engineer, or decompile the Software except as expressly permitted by applicable law.
+2. Online Delivery and Access
+The Software is provided to the Licensee via an online platform or download link from Utilityx-tools.github.io. By clicking "I Agree" and downloading the Software, the Licensee acknowledges and agrees to the terms and conditions outlined in this Agreement.
+
+3. Ownership
+The Software and all associated intellectual property rights, including but not limited to copyrights, patents, trade secrets, and trademarks, are and will remain the sole property of the Licensor. This Agreement grants no ownership rights to the Licensee, and the Licensee does not acquire any intellectual property rights in the Software.
+
+4. Restrictions
+The Licensee agrees not to:
+
+Edit, modify, or attempt to alter the Software in any way;
+Rent, lease, distribute, or commercially exploit the Software without express written consent from the Licensor;
+Use the Software in any manner that violates applicable laws or infringes on the rights of third parties.
+5. License Fee
+In consideration for the rights granted under this Agreement, the Licensee shall pay the agreed-upon license fee as specified in a separate invoice or agreement, as applicable.
+
+6. Support and Maintenance
+The Licensor may, at its discretion, provide support and maintenance for the Software under a separate agreement. However, the Licensor is under no obligation to provide such services.
+
+7. Term and Termination
+This Agreement is effective upon acceptance by the Licensee and will remain in effect until terminated. The Licensee may terminate the Agreement at any time by ceasing to use the Software. The Licensor may terminate the Agreement if the Licensee violates any of its terms. Upon termination, the Licensee must cease all use of the Software and destroy all copies.
+
+8. Warranty Disclaimer
+The Software is provided "as is," without any warranties, express or implied, including but not limited to the implied warranties of merchantability or fitness for a particular purpose. The Licensor does not guarantee that the Software will meet the Licensee’s needs or that it will be uninterrupted or error-free.
+
+9. Limitation of Liability
+To the fullest extent permitted by law, the Licensor will not be liable for any indirect, incidental, special, or consequential damages, including but not limited to loss of profits, data, or use, even if the Licensor has been advised of the possibility of such damages.
+
+10. Miscellaneous
+Entire Agreement: This Agreement represents the complete agreement between the parties regarding the Software and supersedes any prior agreements or understandings.
+Amendments: Any changes to this Agreement must be made in writing and signed by both parties.
+Severability: If any provision of this Agreement is deemed invalid or unenforceable, the remainder of the Agreement will remain in full effect.
+By downloading the Software, you acknowledge that you have read, understood, and accepted the terms and conditions of this Agreement.
+            </p>
+        </div>
+        <button id="EULA-btn" onclick="toggleEULA()">Show EULA</button>
     </section>
 
     <!-- Showcase Section -->
@@ -63,10 +123,21 @@
         </div>
     </footer>
 
-    <!-- JavaScript to handle Learn More button and Disclaimer visibility -->
+    <!-- JavaScript -->
     <script>
+        // Function to show the Disclaimer box
         function showDisclaimer() {
             document.getElementById('disclaimer-box').style.display = 'block';
+        }
+
+        // Function to toggle the EULA box visibility
+        function toggleEULA() {
+            const eulaBox = document.getElementById('EULA-box');
+            if (eulaBox.style.display === 'block') {
+                eulaBox.style.display = 'none';
+            } else {
+                eulaBox.style.display = 'block';
+            }
         }
     </script>
 
